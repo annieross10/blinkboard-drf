@@ -9,7 +9,7 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     location = models.CharField(max_length=100, blank=True)
     birth_date = models.DateField(null=True, blank=True)
-    profile_picture = models.ImageField(upload_to='profile_pictures/', default='default.jpg')
+    profile_picture = models.ImageField(upload_to='images/', default='../default_profile_qohjd5')
 
     class Meta:
         ordering = ['created_at']
