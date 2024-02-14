@@ -30,6 +30,13 @@ class Post(models.Model):
     def __str__(self):
         return f"Post by {self.user.username} at {self.created_at}"
 
+class Like(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Like by {self.user.username} on {self.post}"
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
