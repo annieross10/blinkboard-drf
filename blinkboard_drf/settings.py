@@ -39,7 +39,7 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'blinkboard-drf.serializers.CurrentUserSerializer'
 }
 
 # Quick-start development settings - unsuitable for production
@@ -108,7 +108,7 @@ else:
 CORS_ALLOW_CREDENTIALS = True
 
 
-ROOT_URLCONF = 'drf_api.urls'
+ROOT_URLCONF = 'blinkboard-drf.urls'
 
 TEMPLATES = [
     {
@@ -126,7 +126,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'drf_api.wsgi.application'
+WSGI_APPLICATION = 'blinkboard-drf.wsgi.application'
 
 
 # Database
