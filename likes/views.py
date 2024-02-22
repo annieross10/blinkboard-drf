@@ -1,5 +1,4 @@
 from rest_framework import generics, permissions
-from blinkboard-drf.permissions import IsOwnerOrReadOnly
 from likes.models import Like
 from likes.serializers import LikeSerializer
 
